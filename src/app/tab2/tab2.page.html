@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Завдання 2 </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title
+        >Знайдіть добуток чисел, кратних 10, якщо їх кількість
+        парна</ion-card-title
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Початок (a)</ion-label>
+        <ion-input type="number" [(ngModel)]="a"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Кінець (b)</ion-label>
+        <ion-input type="number" [(ngModel)]="b"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="calculateProduct()"
+        >Обчислити</ion-button
+      >
+
+      <ion-text *ngIf="result !== null">
+        <h3>Результат: {{ result }}</h3>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

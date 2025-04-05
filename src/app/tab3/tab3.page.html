@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Завдання 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="form-card">
+    <ion-card-content>
+      <h2 class="form-title">
+        Згенерувати матрицю розміром NxN. Знайдіть суму елементів усіх непарних
+        рядків. Виокремити ці рядки кольором, якщо їхня сума більше за 100.
+      </h2>
+
+      <ion-item>
+        <ion-label position="floating">Введіть N</ion-label>
+        <ion-input type="number" [(ngModel)]="n"></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="full"
+        (click)="generateMatrix()"
+        class="calculate-button"
+      >
+        Згенерувати
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf="matrix.length > 0" class="matrix-container">
+    <h3>Результат:</h3>
+    <div
+      *ngFor="let row of matrix; let i = index"
+      [class.highlight]="isHighlighted(i)"
+      class="matrix-row"
+    >
+      <span *ngFor="let num of row">{{ num }}</span>
+      <span *ngIf="i % 2 !== 0" class="sum-label"
+        >→ Сума: {{ oddRowSums[i] }}</span
+      >
+    </div>
+  </div>
+</ion-content>

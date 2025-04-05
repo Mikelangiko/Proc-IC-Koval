@@ -1,0 +1,32 @@
+<app-my-header name="Лаб №2"></app-my-header>
+
+<ion-header [translucent]="true"> </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        14. Список продаж за день: <br />
+        • Дата. <br />
+        • Кількість проданих товарів. <br />
+        • Сума оплачених продажів. <br />
+        • Сума продаж в кредит.<br />
+        Згрупувати продажі по тижням. Вивести графік по кількості продажів за
+        кожен тиждень.
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Групування продажів по тижням</h2>
+      <ion-list>
+        <ion-item *ngFor="let week of groupedSales">
+          <ion-label>
+            <h3>Тиждень {{ week.weekStart }}</h3>
+            <p>Загальна кількість продажів: {{ week.totalSales }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <h2>Графік продажів за тижнями</h2>
+      <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

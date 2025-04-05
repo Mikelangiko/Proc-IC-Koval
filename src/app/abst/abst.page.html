@@ -1,0 +1,16 @@
+<app-my-header name="Лаб №3"></app-my-header>
+
+<ion-content>
+  <img src="../../assets/img/task_lab3.png" alt="ff" />
+  <ion-list>
+    <ion-card
+      *ngFor="let tool of paintTools"
+      [ngClass]="{ 'highlight': tool.length === getMaxLength() }"
+    >
+      <ion-card-header>
+        <ion-card-title>{{ tool.type }} ({{ tool.color }})</ion-card-title>
+      </ion-card-header>
+      <ion-card-content> Довжина: {{ tool.length }} см </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

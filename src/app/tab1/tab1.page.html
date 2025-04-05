@@ -1,0 +1,37 @@
+<app-my-header name="Лаб №1"></app-my-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Завдання 1 </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title
+        >Знайти суму чисел, кратних 6, якщо сума непарна</ion-card-title
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Число 1</ion-label>
+        <ion-input type="number" [(ngModel)]="num1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Число 2</ion-label>
+        <ion-input type="number" [(ngModel)]="num2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Число 3</ion-label>
+        <ion-input type="number" [(ngModel)]="num3"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="calculateSum()">Обчислити</ion-button>
+
+      <ion-text *ngIf="result !== null">
+        <h3>Результат: {{ result }}</h3>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,44 @@
+.form-card {
+  padding: 20px;
+  margin: auto;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.calculate-button {
+  font-size: 18px;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  margin-top: 15px;
+}
+
+.matrix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.matrix-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 22px;
+  padding: 5px;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.sum-label {
+  font-weight: bold;
+  margin-left: 15px;
+}
