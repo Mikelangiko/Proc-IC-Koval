@@ -8,7 +8,7 @@ import { Tab6PageRoutingModule } from './tab6-routing.module';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { MyHeaderComponent } from '../my-header/my-header.component';
 import { Tab6Page } from './tab6.page';
-
+import { AddFoodFormComponent } from '../addfood/addfood.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +17,7 @@ import { Tab6Page } from './tab6.page';
     ExploreContainerComponentModule,
     MyHeaderComponent,
     Tab6PageRoutingModule,
+    AddFoodFormComponent,
   ],
   declarations: [Tab6Page],
 })

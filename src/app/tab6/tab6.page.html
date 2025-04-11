@@ -11,6 +11,17 @@
     </ion-card-header>
   </ion-card>
 
+  <ion-button expand="block" color="primary" (click)="openModal()">
+    ➕ Додати продукт
+  </ion-button>
+
+  <!-- Компонент додавання -->
+  <app-addfood
+    [showModal]="showModal"
+    (formSubmitted)="handleFormSubmit($event)"
+    (modalClosed)="closeModal()"
+  ></app-addfood>
+
   <ion-grid>
     <ion-row>
       <ion-col size="12" size-sm="6" size-md="4" *ngFor="let item of foodList">
@@ -28,6 +39,9 @@
                 <li *ngFor="let detail of item.getDetails()">{{ detail }}</li>
               </ul>
             </div>
+            <ion-button expand="block" color="success" shape="round">
+              Замовити
+            </ion-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
